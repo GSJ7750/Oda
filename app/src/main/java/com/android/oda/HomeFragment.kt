@@ -27,11 +27,14 @@ class HomeFragment : Fragment() {
         return myFragment
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
+    override fun onActivityCreated(savedInstanceState: Bundle?) {//fragment에서는 이거 해줘야 위젯 뷰 띄울 수 있음
         super.onActivityCreated(savedInstanceState)
         home_banner_VP.adapter = HomeBannerPagerAdapter(getBannerImagesList())
         home_banner_VP.orientation = ViewPager2.ORIENTATION_HORIZONTAL
+
+        spring_dots_indicator.setViewPager2(home_banner_VP)
     }
+
     private fun getBannerImagesList(): ArrayList<Int> {
         return arrayListOf(R.drawable.s1, R.drawable.s2, R.drawable.s3)
     }

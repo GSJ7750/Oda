@@ -43,14 +43,40 @@
             app:layout_constraintTop_toTopOf="parent" />
     </TableRow>
 
-    <TableRow
+    <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="match_parent">
 
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/home_banner_VP"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </TableRow>
+            android:layout_height="250dp"
+            android:layout_weight="1"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:layout_editor_absoluteX="411dp">
+
+        </androidx.viewpager2.widget.ViewPager2>
+
+        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+            android:id="@+id/spring_dots_indicator"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginStart="32dp"
+            android:layout_marginLeft="32dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="32dp"
+            android:layout_marginRight="32dp"
+            app:dampingRatio="0.5"
+            app:dotsCornerRadius="20dp"
+            app:dotsSize="10dp"
+            app:dotsSpacing="6dp"
+            app:dotsStrokeWidth="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/home_banner_VP"
+            app:stiffness="300" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
 </GridLayout>
