@@ -8,41 +8,6 @@
     tools:context=".HomeFragment">
 
 
-    <TableRow
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/button"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="로고"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/editText4"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <EditText
-            android:id="@+id/editText4"
-            android:layout_width="234dp"
-            android:layout_height="48dp"
-            android:ems="10"
-            android:hint="검색"
-            android:inputType="textPersonName"
-            app:layout_constraintStart_toEndOf="@+id/button2"
-            app:layout_constraintTop_toTopOf="parent" />
-
-        <Button
-            android:id="@+id/button2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_weight="0"
-            android:text="장바구니"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
-    </TableRow>
-
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent">
@@ -54,27 +19,28 @@
             android:layout_weight="1"
             app:layout_constraintTop_toTopOf="parent"
             tools:layout_editor_absoluteX="411dp">
-
         </androidx.viewpager2.widget.ViewPager2>
 
-        <com.tbuonomo.viewpagerdotsindicator.SpringDotsIndicator
+        <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
             android:id="@+id/spring_dots_indicator"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginStart="32dp"
             android:layout_marginLeft="32dp"
-            android:layout_marginTop="8dp"
             android:layout_marginEnd="32dp"
             android:layout_marginRight="32dp"
+            android:layout_marginBottom="8dp"
             app:dampingRatio="0.5"
+            app:dotsColor="@color/materialwhite"
             app:dotsCornerRadius="20dp"
             app:dotsSize="10dp"
             app:dotsSpacing="6dp"
             app:dotsStrokeWidth="1dp"
+            app:layout_constraintBottom_toBottomOf="@+id/home_banner_VP"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/home_banner_VP"
+            app:selectedDotColor="@color/white"
             app:stiffness="300" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
