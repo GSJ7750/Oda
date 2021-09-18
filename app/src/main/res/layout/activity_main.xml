@@ -21,14 +21,15 @@
             android:text="로고"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintHorizontal_bias="1.0"
-            app:layout_constraintStart_toEndOf="@+id/editText4"
+            app:layout_constraintStart_toEndOf="@+id/search_ET"
             app:layout_constraintTop_toTopOf="parent" />
 
         <EditText
-            android:id="@+id/editText4"
+            android:id="@+id/search_ET"
             android:layout_width="234dp"
             android:layout_height="48dp"
             android:ems="10"
+            android:focusable="false"
             android:hint="검색"
             android:inputType="textPersonName"
             app:layout_constraintStart_toEndOf="@+id/button2"

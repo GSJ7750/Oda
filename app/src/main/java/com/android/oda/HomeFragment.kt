@@ -33,6 +33,8 @@ class HomeFragment : Fragment() {
         home_banner_VP.orientation = ViewPager2.ORIENTATION_HORIZONTAL
 
         spring_dots_indicator.setViewPager2(home_banner_VP)
+
+
     }
 
     private fun getBannerImagesList(): ArrayList<Int> {
